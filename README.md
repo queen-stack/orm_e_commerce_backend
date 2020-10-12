@@ -90,6 +90,7 @@ No testing is in place
 
 ## Contributing
 :octocat: [Jenifer Queen](https://github.com/queen-stack)
+Xandromus
 
 ## Questions
-✉️ Contact me with any questions: [email](mailto:queen_jenf@yahoo.com) , [GitHub](https://github.com/queen-stack)<br />
+✉️ Contact me with any questions: [email](mailto:queen_jenf@yahoo.com) , [GitHub](https://github.com/queen-stack)<br/>
