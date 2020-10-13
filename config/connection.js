@@ -2,13 +2,11 @@ const Sequelize = require('sequelize');
 require('dotenv').config();
 let sequelize;
 
-if (process.env.JAWSDB_URL) {
-  sequelize = new (process.env.JAWSDB_URL);
-} else {
-sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW, {
+// need to update with own credentials and seed the database
+
+sequelize = new Sequelize(process.env.DATABASE, process.env.USERNAME, process.env.PASSWORD, {  
       host: 'localhost',
       dialect: 'mysql',
       port: 3306
     });
-  }
 module.exports = sequelize;
