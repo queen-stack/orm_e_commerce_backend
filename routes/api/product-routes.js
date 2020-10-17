@@ -70,6 +70,7 @@ router.post('/', (req, res) => {
     tagIds: req.body.tagIds
     })
     .then((product) => {
+      console.log(req.body.tagIds);
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
       if (req.body.tagIds.length) {
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
@@ -122,12 +123,12 @@ router.put('/:id', (req, res) => {
       // run both actions
       return Promise.all([
         ProductTag.destroy({ where: { id: productTagsToRemove } }),
-        ProductTag.bulkCreate(newProductTags),
+        ProductTag.bulkCreate(newProductTags)
       ]);
     })
     .then((updatedProductTags) => res.json(updatedProductTags))
     .catch((err) => {
-      // console.log(err);
+      console.log(err);
       res.status(400).json(err);
     });
 });
